@@ -1,6 +1,4 @@
-const API_KEY = process.env.API_KEY;
-
-console.log(API_KEY);
+export const API_KEY = process.env.API_KEY;
 
 const request = {
 	fetchTrending: {

@@ -1,17 +1,14 @@
 import ThumbNail from './ThumbNail';
-import FlipMove from 'react-flip-move';
 
 const Results = ({ results }) => {
-	console.log(results);
-
 	return (
-		<FlipMove
+		<div
 			className='px-5 my-10 sm:grid md:grid-cols-2 
-			xl:grid-cols-3 3xl:flex flex-wrap justify-center'>
+			xl:grid-cols-3 3xl:flex flex-wrap justify-center cursor-pointer'>
 			{results.map((res) => (
 				<ThumbNail key={res.id} result={res} />
 			))}
-		</FlipMove>
+		</div>
 	);
 };
 export default Results;

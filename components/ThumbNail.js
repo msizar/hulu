@@ -1,12 +1,15 @@
 import { ThumbUpIcon } from '@heroicons/react/outline';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 const ThumbNail = ({ result }) => {
 	const BASE_URL = 'https://image.tmdb.org/t/p/original/';
+	const router = useRouter();
 	return (
 		<div
 			className='group transition duration-200
-      ease-in transform sm:hover:scale-105 hover:z-50 sm:p-5'>
+        ease-in transform sm:hover:scale-105 hover:z-50 sm:p-5'
+			onClick={() => router.push(`/${result.id}`)}>
 			<Image
 				alt='thumnial'
 				layout='responsive'
